@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+
+		// This function start playing the video with id from current slide,
+		// toggles it to the FullScreen mode and fires the CancelFullScreen()
+		// at the end of the video.
+		function toggleFullScreen(id) {
+			var videoElement = document.getElementById(id);
+			$("#"+id).bind('ended', function(){ document.webkitCancelFullScreen(); });
+			videoElement.play();
+			videoElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+		}
+	
+		// This part is to add a listener for <Enter> key and to call toggleFullScreen()
+		// function with the video ID that is dynamically obtained from the CURRENTLY displayed slide.
+		document.addEventListener("keydown", function(e) {
+			if (e.keyCode == 13) {
+				toggleFullScreen($('.present').find('video').attr('id'));
+			}
+		}, false);
+	
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<H1>Technologie in Oude-IJsselstreek</H1>
+				</section>
+
+				<section>
+					<H3>Jan Geert Hek</H3>
+					<p><a href="mailto:j.g.hek@qtopia.nl">j.g.hek@qtopia.nl</a></p>
+					<p>&nbsp;</p>
+					<p>IT-architect / development / security</p>
+					<p><a href="https://www.qtopia.nl">Qtopia</a></p>
+				</section>
+
+				<section>
+					<section>
+						<H1>Glasvezel in Oude-IJsselstreek</H1>
+					</section>
+					<section data-background="images/jg_en_geoff.jpg">
+					</section>
+					<section data-background="images/Snelheden.png">
+					</section>
+					<section data-background="images/Heelweg.png">
+					</section>
+					<section data-background="images/OudeIJsselstreek.png">
+					</section>
+					<section data-background="images/AchterhoekZuid.png">
+					</section>
+					<section data-background-video="images/VID_20171212_194731.mp4">
+					</section>
+					<section>
+						<H1>Lessons learned</H1>
+						<p class="fragment">Maak contact</p>
+						<p class="fragment">Positief en constructief</p>
+						<p class="fragment">Elkaar versterken</p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<H1>Nieuwe Technologie</H1>
+					</section>
+					<section>
+						<h1>Neurale netwerken</h1>
+						<img src="images/cat_nn.png"/>
+					</section>
+					<section>
+						<h1>AI services</h1>
+						<a href="https://aidemos.microsoft.com/" target="_blank">https://aidemos.microsoft.com</a>
+					</section>
+					<section data-background-video="images/yolo720.mp4">
+					</section>
+					<section>
+						<img src="images/kinect.jpeg"/>
+					</section>
+					<section data-background-video="images/kinect.mp4">
+					</section>
+					<section>
+						<h1>IoT</h1>
+						<img src="images/esp8266.jpg"/>
+					</section>
+					<section data-background-iframe="http://shelly.cloud">
+					</section>
+					<section>
+						<h1>Betalen</h1>
+						<img height="40%" width="40%" src="images/HighTechBedelaar.png"/>
+					</section>
+					<section>
+						<h3>Meer:</h3>
+						<ul>
+							<li>Energie: Waterstof</li>
+							<li>Zelfrijdende auto's</li>
+							<li>Kweekvlees</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Wat is er nodig?</h1>
+						<p class="fragment">Leefbaarheid?</p>
+						<p class="fragment">anti-krimp middel?</p>
+						<p class="fragment">Betere economie?</p>
+						<p class="fragment">Sociale samenhang?</p>
+					</section>
+					<section>
+						<h3>Wii Bowling</h3>
+						<img width="95%" height="95%" src="images/wii_bowling.jpg"/>
+					</section>
+
+					
+					
+
+				</section>
+				<section>Slide 2</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
